@@ -1,5 +1,8 @@
 local Types = require(script.Parent.Types)
 
+-- Notice that Story is completely linear, which means it doesnt "jump" through steps, just iterates through all of them and checks their requirements.
+-- And yes, each member of "StoryObject" will be referenced as "step".
+
 return {
 	{Name = "<unknown>",Text = "Hey you."}, 
 	
