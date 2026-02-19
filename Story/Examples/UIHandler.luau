@@ -16,7 +16,6 @@ local NameLabel = MainFrame.NameLabel :: TextLabel
 local function RunStory()
 	Story.OnShownEventId:Connect(function(id)
 		if id == "Death" then
-			MainFrame.Visible = false
 			Player.Character.Humanoid.Health = 0
 			return
 		end
