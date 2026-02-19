@@ -38,8 +38,8 @@ return {
 	{Text = "Huh? What's going on?"},
 	{
 		Options = {
-			{Story = SubStories.WhoAreYou, Id = "WhoAreYou", Text = "Who are you?"}, 
-			{Story = SubStories.GetOut, Id = "GetOut", Text = "Get him out."}
+			{Story = SubStories.WhoAreYou, Id = "WhoAreYou", Text = "Who are you?"}, -- "Story" is basically the table we are referencing, it will run as usual, it will not override any local variables (E.g. Name or RequiredOptions) 
+			{Story = SubStories.GetOut, Id = "GetOut", Text = "Get him out."},
 		}, 
 		Text = "..."
 	}, 
