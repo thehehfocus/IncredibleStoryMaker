@@ -28,7 +28,7 @@ local StoryObject = require(index.to.object)
 StoryModule.IterateStoryline(StoryObject, iteratorFunction) -- Iterator functions receives parameters, which are: Name:string, Text:string, Options:{{RefId:any, Text:string}}, Color:Color3?, Event:string?, Tags: {[string]: boolean}
 
 -- Example of iterator function:
-Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color)
+Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You just receive overall parameters, StoryMaker doesnt make UI for you.
 		NameLabel.Text = Name
 		_TextLabel.Text = Text
 		_TextLabel.TextColor3 = Color or Color3.new(0,0,0)
