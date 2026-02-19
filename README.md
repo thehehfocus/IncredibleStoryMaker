@@ -14,18 +14,18 @@ Average StoryObject would look something like:
 ``` luau
 local StoryObject = {
   {Name = "<user>"}, -- Setting name
-  {Text = "Hey! This is example text!"}, 						] -- Some story stuff
-  {Text = "I have a different name.", Name = "<unknown>"},		]
+  {Text = "Hey! This is example text!"}, 						--] -- Some story stuff
+  {Text = "I have a different name.", Name = "<unknown>"},		--]
 
   {Options = {["Choose option One"] = "COO", ["Choose option Two"] = "COT"}}, -- Wow! Branching options!
 
-  {RequiredOptions = {"COO"}},              ]
-  {Name = "<user>"},                        ] -- Runs if chose option one
-  {Text = "I chose option one"},            ]
+  {RequiredOptions = {"COO"}},              --]
+  {Name = "<user>"},                        --] -- Runs if chose option one
+  {Text = "I chose option one"},            --]
 
-  {RequiredOptions = {"COT"}}, 				]
-  {Name = "<user>"},						] -- Runs if chose option two
-  {Text = "I chose option two"},			]
+  {RequiredOptions = {"COT"}}, 				--]
+  {Name = "<user>"},						--] -- Runs if chose option two
+  {Text = "I chose option two"},			--]
 } :: Types.StoryObject -- adds autocomplete stuff.
 ```
 Look at "Examples" for explanations and advanced comments!
