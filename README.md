@@ -2,12 +2,12 @@ Thy roblox model - [https://create.roblox.com/store/asset/82194195753457] </br>
 This is incredible.
 
 Main gimmick is an easy story writer - luau table, thats all. \
-This supports: \
+This supports: 
 - Runtime Tags
 - Branching
 - Text formatting
 - Event triggers
-While being able to be read easily. \
+While being able to be read easily. 
 
 Average StoryObject should look something like:
 
