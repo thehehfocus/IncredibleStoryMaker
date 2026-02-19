@@ -3,7 +3,7 @@ export type StoryObject = {
 		Name: string?, -- What returns to callback function as "Name".
 		Text: string?, -- What returns to callback function as "Text".
 		Options: {
-			[number]: {Story: StoryObject, Id: string, Text: string?} -- Advanced option 
+			[number]: {Story: StoryObject, Id: string, Text: string?} -- Technically Advanced and Recommended option 
 			|string -- EZ option
 		}?,
 		Color: Color3?, -- What returns to callback function as "Color".
