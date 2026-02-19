@@ -44,5 +44,5 @@ return {
 		}, 
 		Text = "..."
 	}, 
-    {Text = "This will run anyway."} -- Returns to the main story if options' ones end.
+    {Text = "This will run anyway."} -- Returns to the main story if options' ones end. In this scenario, Name will be "<user>".
 } :: Types.StoryObject
