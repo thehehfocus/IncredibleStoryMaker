@@ -2,7 +2,7 @@ Thy roblox model - [https://create.roblox.com/store/asset/82194195753457] </br>
 This is incredible.
 
 Main gimmick is an easy story writer - luau table, thats all. \
-This supports: 
+This supports:
 - Runtime Tags
 - Branching
 - Text formatting
@@ -10,36 +10,35 @@ This supports:
 
 While being able to be read easily. 
 
-Average StoryObject should look something like:
-
+Average StoryObject would look something like:
 ``` luau
 local StoryObject = {
-  {Name = "<user>"}, -- all strings are parsed with keywords. No text and no options = skips callback function but runs if requirements met.
-  {Text = "Hey! This is example text!"}, -- Remembers last used Name
-  {Text = "I have a different name.", Name = "<unknown>"}, -- Rewrites Name.
+  {Name = "<user>"}, -- Setting name
+  {Text = "Hey! This is example text!"}, 						] -- Some story stuff
+  {Text = "I have a different name.", Name = "<unknown>"},		]
 
-  {Options = {["Choose option One"] = "COO", ["Choose option Two"] = "COT"}}, -- EZ type of option, look through examples for advanced one.
+  {Options = {["Choose option One"] = "COO", ["Choose option Two"] = "COT"}}, -- Wow! Branching options!
 
-  {RequiredOptions = {"COO"}}, -- Option ID                                   ]
-  {Name = "<user>"}, -- Remembers last RequiredOptions                        ] -- Completely skips if required option wasnt chosen
-  {Text = "I chose option one"}, -- Remembers last RequiredOptions            ]
+  {RequiredOptions = {"COO"}},              ]
+  {Name = "<user>"},                        ] -- Runs if chose option one
+  {Text = "I chose option one"},            ]
 
-  {RequiredOptions = {"COT"}}, -- Option ID, Overrides last RequiredOptions.
-  {Name = "<user>"},
-  {Text = "I chose option two"},
+  {RequiredOptions = {"COT"}}, 				]
+  {Name = "<user>"},						] -- Runs if chose option two
+  {Text = "I chose option two"},			]
 } :: Types.StoryObject -- adds autocomplete stuff.
 ```
+Look at "Examples" for explanations and advanced comments!
 
 Running StoryObject is like this: 
-
 ``` luau
 local StoryModule = require(index.to.story)
 local StoryObject = require(index.to.object)
 
-StoryModule.IterateStoryline(StoryObject, iteratorFunction) -- Iterator functions receives parameters, which are: Name:string, Text:string, Options:{{RefId:any, Text:string}}, Color:Color3?, Event:string?, Tags: {[string]: boolean}
+StoryModule.IterateStoryline(StoryObject, iteratorFunction)
 
 -- Example of iterator function:
-Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You just receive overall parameters, StoryMaker doesnt make UI for you.
+Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You just receive overall parameters of each step, StoryMaker doesnt make UI for you.
 		NameLabel.Text = Name
 		_TextLabel.Text = Text
 		_TextLabel.TextColor3 = Color or Color3.new(0,0,0)
@@ -76,7 +75,7 @@ Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You 
 				task.wait()
 			until Clicked
 			
-			return Chosen -- MUST return chosen option's RefId.
+			return Chosen
 		else
 			Mouse.Button1Down:Wait()
 		end
