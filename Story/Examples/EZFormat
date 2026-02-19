@@ -1,22 +1,22 @@
 local Types = require(script.Parent.Types)
 
 return {
-	{Name = "<unknown>",Text = "Hey you."},
+	{Name = "<unknown>",Text = "Hey you."}, 
 	
-	{Name = "<user>"},
-	{Text = "Huh? What's going on?"},
-	{Options = {["Get out of here"] = "GetOut", ["Who are you..?"] = "WhoAreYou"}, Text = "..."}, 
+	{Name = "<user>"}, -- all strings are parsed with keywords. No text and no options = skips callback function but runs if requirements met.
+	{Text = "Huh? What's going on?"}, -- Remembers last used Name
+	{Options = {["Get out of here"] = "GetOut", ["Who are you..?"] = "WhoAreYou"}, Text = "..."},  -- EZ type of option, look through examples for advanced one.
 	----------------------------------
-	{RequiredOptions = {"GetOut"}},
-	{Name = "<user>", Text = "Get out of here."},
-	{Name = "<unknown>"},
-	{Text = "How dare you say that?! Unworthy <user>!!"},
-	{Text = "*You got sliced in half.*"},
-	{Event = "Death"},
+	{RequiredOptions = {"GetOut"}},	 -- Option ID												]
+	{Name = "<user>", Text = "Get out of here."},	 -- Remembers last RequiredOptions			]
+	{Name = "<unknown>"}, -- Rewrites Name. 													] -- Completely skips if required option wasnt chosen
+	{Text = "How dare you say that?! Unworthy <user>!!"},										]
+	{Text = "*You got sliced in half.*"},														]
+	{Event = "Death"},				  -- Remembers last RequiredOptions							]
 	----------------------------------
-	{RequiredOptions = {"WhoAreYou"}},
+	{RequiredOptions = {"WhoAreYou"}}, -- Option ID, Overrides last RequiredOptions.
 	{Name = "<user>",Text = "Who are you..?"},
 	{Name = "Bob"},
 	{Text = "Im Bob."},
 	{Text = "Do you not know me?"},
-} :: Types.StoryObject
+} :: Types.StoryObject -- adds autocomplete stuff.
