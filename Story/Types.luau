@@ -4,7 +4,7 @@ export type StoryObject = {
 		Text: string?, -- What returns to callback function as "Text".
 		Options: {
 			[number]: {Story: StoryObject, Id: string, Text: string?} -- Technically Advanced and Recommended option 
-			|string -- EZ option
+			-- [string]: string -- EZ option, where [string] is the text showed, and string is its id.
 		}?,
 		Color: Color3?, -- What returns to callback function as "Color".
 		RequiredOptions: {string}?, -- What requires to run, skips if isnt met.
