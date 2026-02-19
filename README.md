@@ -14,7 +14,7 @@ Average StoryObject should look something like:
 
 ``` luau
 local StoryObject = {
-  {Name = "<user>"}, -- all strings are parsed with keywords. No text or options = skips callback function.
+  {Name = "<user>"}, -- all strings are parsed with keywords. No text and no options = skips callback function but runs if requirements met.
   {Text = "Hey! This is example text!"}, -- Remembers last used Name
   {Text = "I have a different name.", Name = "<unknown>"}, -- Rewrites Name.
 
