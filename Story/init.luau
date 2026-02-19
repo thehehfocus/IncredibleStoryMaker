@@ -15,7 +15,7 @@ this.OnShownEventId = Signal() :: Signal.Signal<string>
 
 function this.IterateStoryline(
 	Storyline: Types.StoryObject, 
-	Callback: ((Name:string, Text:string, Options:{{RefId:any, Text:string}}, Color:Color3?, Event:string?, Tags: {[string]: boolean}) -> ()),
+	Callback: ((Name:string, Text:string, Options:{{RefId:any, Text:string}}, Color:Color3?, Event:string?, Tag: string?) -> any?),
 	Tags: {[string]:boolean}
 )
 	local LastConfig = {}
@@ -112,7 +112,7 @@ function this.IterateStoryline(
 			OptionsText = nil
 		end
 		
-		local ChosenOption = Callback(Name, Text, OptionsText, Color, v.Event, v.Tag) :: typeof(v.Options.any)
+		local ChosenOption = Callback(Name, Text, OptionsText, Color, v.Event, v.Tag.Set) :: typeof(v.Options.any)
 		
 		if ChosenOption then
 			local Id = nil
