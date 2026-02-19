@@ -1,16 +1,16 @@
 export type StoryObject = {
 	{
-		Name: string?, 
-		Text: string?,
+		Name: string?, -- What returns to callback function as "Name".
+		Text: string?, -- What returns to callback function as "Text".
 		Options: {
-			[number|string]: {Story: StoryObject, Id: string, Text: string?}
-			|string
+			[number]: {Story: StoryObject, Id: string, Text: string?} -- Advanced option 
+			|string -- EZ option
 		}?,
-		Color: Color3?,
-		RequiredOptions: {string}?,
-		Event: string?,
-		Break: boolean?,
-		Tag: {Set: string?, Remove: string?, Require: {[string]: boolean?}?},
+		Color: Color3?, -- What returns to callback function as "Color".
+		RequiredOptions: {string}?, -- What requires to run, returns if isnt met.
+		Event: string?, -- Event's identifier that fires while iterating the story.
+		Break: boolean?, -- Simply breaks the story from running along with iteratorFunction.
+		Tag: {Set: string?, Remove: string?, Require: {[string]: boolean?}?}, -- SET/REMOVE/REQUIRE local story tags.
 	}
 }
 
