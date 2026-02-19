@@ -112,7 +112,7 @@ function this.IterateStoryline(
 			OptionsText = nil
 		end
 		
-		local ChosenOption = Callback(Name, Text, OptionsText, Color, v.Event, v.Tag.Set) :: typeof(v.Options.any)
+		local ChosenOption = Callback(Name, Text, OptionsText, Color, v.Event, if v.Tag then v.Tag.Set else nil) :: typeof(v.Options.any)
 		
 		if ChosenOption then
 			local Id = nil
