@@ -6,7 +6,7 @@ local Types = require(script.Parent.Types)
 return {
 	{Name = "<unknown>",Text = "Hey you."}, 
 	
-	{Name = "<user>"}, -- all strings are parsed with keywords. No text and no options = skips callback function but runs if requirements met.
+	{Name = "<user>"}, -- all strings are parsed with keywords. No text and no options = skips callback function but steps if requirements met.
 	{Text = "Huh? What's going on?"}, -- Remembers last used Name
 	{Options = {["Get out of here"] = "GetOut", ["Who are you..?"] = "WhoAreYou"}, Text = "..."},  -- EZ type of option, look through examples for advanced one.
 	----------------------------------
