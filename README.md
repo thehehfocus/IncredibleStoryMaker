@@ -68,7 +68,7 @@ Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You 
 				task.wait()
 			until Clicked
 			
-			return Chosen -- MUST return chosen option's id.
+			return Chosen -- MUST return chosen option's RefId.
 		else
 			Mouse.Button1Down:Wait()
 		end
