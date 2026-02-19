@@ -11,11 +11,12 @@ local StoryObject = {
   {Text = "I have a different name.", Name = "<unknown>"}, -- Rewrites Name.
 
   {Options = {["Choose option One"] = "COO", ["Choose option Two"] = "COT"}}, -- EZ type of option, look through examples for advanced one.
-  {RequiredOptions = {"COO"}}, -- Option ID
-  {Name = "<user>"}, -- Remembers last RequiredOptions
-  {Text = "I chose option one"}, -- Remembers last RequiredOptions
 
-  {RequiredOptions = {"COT"}}, -- Option ID
+  {RequiredOptions = {"COO"}}, -- Option ID                                   ]
+  {Name = "<user>"}, -- Remembers last RequiredOptions                        ] -- Completely skips if required option wasnt chosen
+  {Text = "I chose option one"}, -- Remembers last RequiredOptions            ]
+
+  {RequiredOptions = {"COT"}}, -- Option ID, Overrides last RequiredOptions.
   {Name = "<user>"},
   {Text = "I chose option two"},
 } :: Types.StoryObject -- adds autocomplete stuff.
