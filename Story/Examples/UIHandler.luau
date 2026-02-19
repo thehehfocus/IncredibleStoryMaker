@@ -66,7 +66,7 @@ local function RunStory()
 		
 		MainFrame.Visible = false
 	end)
-
+	
 	Story.IterateStoryline(require(script.Parent.Story.Storyline), IterationFunction) -- Iterator functions receive parameters, which are: Name:string, Text:string, Options:{{RefId:any, Text:string}}, Color:Color3?, Event:string?, Tags: {[string]: boolean}
 end
 
