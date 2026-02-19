@@ -6,7 +6,8 @@ This supports:
 - Runtime Tags
 - Branching
 - Text formatting
-- Event triggers \
+- Event triggers </br>
+
 While being able to be read easily. 
 
 Average StoryObject should look something like:
