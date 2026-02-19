@@ -7,7 +7,7 @@ export type StoryObject = {
 			|string -- EZ option
 		}?,
 		Color: Color3?, -- What returns to callback function as "Color".
-		RequiredOptions: {string}?, -- What requires to run, returns if isnt met.
+		RequiredOptions: {string}?, -- What requires to run, skips if isnt met.
 		Event: string?, -- Event's identifier that fires while iterating the story.
 		Break: boolean?, -- Simply breaks the story from running along with iteratorFunction.
 		Tag: {Set: string?, Remove: string?, Require: {[string]: boolean?}?}, -- SET/REMOVE/REQUIRE local story tags.
