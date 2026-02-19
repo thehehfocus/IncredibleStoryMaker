@@ -1,0 +1,22 @@
+local Types = require(script.Parent.Types)
+
+return {
+	{Name = "<unknown>",Text = "Hey you."},
+	
+	{Name = "<user>"},
+	{Text = "Huh? What's going on?"},
+	{Options = {["Get out of here"] = "GetOut", ["Who are you..?"] = "WhoAreYou"}, Text = "..."}, 
+	----------------------------------
+	{RequiredOptions = {"GetOut"}},
+	{Name = "<user>", Text = "Get out of here."},
+	{Name = "<unknown>"},
+	{Text = "How dare you say that?! Unworthy <user>!!"},
+	{Text = "*You got sliced in half.*"},
+	{Event = "Death"},
+	----------------------------------
+	{RequiredOptions = {"WhoAreYou"}},
+	{Name = "<user>",Text = "Who are you..?"},
+	{Name = "Bob"},
+	{Text = "Im Bob."},
+	{Text = "Do you not know me?"},
+} :: Types.StoryObject
