@@ -38,7 +38,7 @@ local StoryObject = require(index.to.object)
 StoryModule.IterateStoryline(StoryObject, iteratorFunction)
 
 -- Example of iterator function:
-Story.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You just receive overall parameters of each step, StoryMaker doesnt make UI for you.
+StoryModule.IterateStoryline(StoryObject, function(Name, Text, Options, Color) -- You just receive overall parameters of each step, StoryMaker doesnt make UI for you.
 		NameLabel.Text = Name
 		_TextLabel.Text = Text
 		_TextLabel.TextColor3 = Color or Color3.new(0,0,0)
